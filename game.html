@@ -19,7 +19,8 @@
   .game--container {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 306px;
+    width: fit-content;
+    border: 9px orangered solid;
     margin: 50px auto;
   }
 
@@ -27,8 +28,7 @@
     font-family: "Permanent Marker", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
+    border: .3px solid #333333;
     cursor: pointer;
 
     line-height: 100px;
@@ -50,11 +50,11 @@
   </div>
   <div class="winning-message" id="winningMessage">
     <div id="winningMessageText"></div>
-    <button id="restartButton">Restart</button>
+    <button class="restartButton">Restart</button>
   </div>
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    const socket = windw.io();
+    const socket = window.io();
 
     function handleCellClick(clickedCellEvent) {
       const clickedCell = clickedCellEvent.target;
@@ -69,7 +69,7 @@
     }
 
     document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
-    document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
+    document.querySelector('.restartButton').addEventListener('click', handleRestartGame);
   </script>
 </body>
 

@@ -30,7 +30,7 @@ function gameValidation() {
     }
 
     if (a === b && b === c) {
-      return (roundWon = true);
+      roundWon = true;
     }
   });
 
