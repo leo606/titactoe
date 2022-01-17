@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "command": "node index.js",
+      "name": "Run node",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ]
+}
